@@ -1,6 +1,12 @@
 package com.example.crudservice.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Topic {
+
+    @Id
     private String ID;
     private String Name;
     private String Descripton;
@@ -9,6 +15,10 @@ public class Topic {
         ID = id;
         Name = name;
         Descripton = descripton;
+    }
+
+    public Topic() {
+
     }
 
     public String getID() {

@@ -15,12 +15,13 @@
     <name>CRUDservice</name>
     <description>Demo project for Spring Boot</description>
 
-    <!-- The properties of our app including the java version -->
+    <!-- The properties of our app including the java version source and output encoding-->
     <properties>
         <java.version>11</java.version>
     </properties>
 
     <!-- All jars needed -->
+    <!-- data base connection dependency -->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -41,6 +42,7 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+        <!-- data base type -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
