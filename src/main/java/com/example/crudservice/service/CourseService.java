@@ -1,6 +1,7 @@
 package com.example.crudservice.service;
 
 import com.example.crudservice.model.Course;
+import com.example.crudservice.model.Topic;
 import com.example.crudservice.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,9 +15,9 @@ public class CourseService {
     private CourseRepository courseRepository;
 
 
-    public List<Course> getAllCourses(){
+    public List<Course> getAllCourses(String topicId){
         List<Course> list = new ArrayList<>();
-        courseRepository.findAll().forEach(list :: add);
+        courseRepository.findByTopicId(topicId).forEach(list :: add);
         return list;
     }
 
